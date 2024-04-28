@@ -155,7 +155,8 @@ address {
     ),
     url(/images/hero.jpg);
   background-repeat: no-repeat;
-  background-size: 1440px;
+  background-position: center;
+  background-size: cover;
 }
 
 .button-hero {
@@ -170,14 +171,14 @@ address {
   border-radius: 4px;
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   margin-left: 164px;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-hero:hover,
 .button-hero:focus {
-  background: #404bbf;
+  background-color: #404bbf;
 }
 /* =========== SECTION 2 ========== */
 
@@ -189,26 +190,23 @@ address {
   display: flex;
   gap: 24px;
 }
-.rule-list-item {
-  width: calc((100% - 72px) / 4);
-}
-.box {
+.rule-icons-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
   height: 112px;
-  background: #f4f4fd;
+  background-color: #f4f4fd;
   position: relative;
   width: 100%;
+  margin-bottom: 8px;
 }
-.icons-rule {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 24px 100px;
+.rule-list-item {
+  width: calc((100% - 72px) / 4);
 }
+
 .rule-title {
   position: absolute;
   width: 1px;
@@ -273,6 +271,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-list-item {
@@ -282,27 +281,33 @@ address {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .cont-text-team {
-  padding: 32px 0 0 0;
-  margin-bottom: 8px;
+  padding: 32px 0;
 }
 .soc-links {
-  display: block;
-  padding: 12px;
-  background: #4d5ae5;
-  fill: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
   border-radius: 50%;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-links-item {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-links:hover,
 .soc-links:focus {
   background: #404bbf;
 }
+.team-social-icons {
+  fill: #f4f4fd;
+}
 .social-links-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   gap: 24px;
-  padding-bottom: 32px;
 }
 
 /* =========== SECTION 4 ========== */
@@ -319,9 +324,11 @@ address {
 }
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover {
   cursor: pointer;
+
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -381,14 +388,18 @@ address {
 }
 /* =========== FOOTER ========== */
 .footer-block {
-  display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
   background: #2e2f42;
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
   padding: 100px 0;
+}
+.container-footer {
+  display: flex;
+  align-items: baseline;
+}
+.logo-text-footer {
+  margin-right: 120px;
 }
 .footer-text {
   width: 264px;
@@ -415,13 +426,9 @@ address {
 .footer-social-item {
   width: calc((100% - 48px) / 4);
   position: relative;
-  background-color: #4d5ae5;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* padding: 12px; */
 }
 
 .footer-social-text {
@@ -440,13 +447,21 @@ address {
   position: absolute;
   top: 0;
   left: 0;
-  display: block;
-  fill: #f4f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   width: 100%;
   height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
   transform: translate(25%, 25%);
 }
-.footer-social-item:hover,
-.footer-social-item:focus {
+.soc-links-footer:hover,
+.soc-links-footer:focus {
   background-color: #31d0aa;
+}
+.footer-social-icons {
+  fill: #f4f4fd;
 }
