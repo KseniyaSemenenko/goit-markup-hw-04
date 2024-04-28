@@ -291,11 +291,11 @@ address {
   height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-links-item {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-links:hover,
 .soc-links:focus {
@@ -324,7 +324,7 @@ address {
 }
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item:hover {
   cursor: pointer;
